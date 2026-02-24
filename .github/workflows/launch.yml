@@ -1,0 +1,29 @@
+name: Launch OCI ARM Instance
+
+  on:
+    schedule:
+      - cron: '*/5 * * * *'  # runs every 5 minutes
+    workflow_dispatch:        # allows manual trigger
+
+  jobs:
+    launch:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+
+        - name: Setup PHP
+          uses: shivammathur/setup-php@v2
+          with:
+            php-version: '8.1'
+
+        - name: Install dependencies
+          run: composer install
+
+        - name: Run script
+          env:
+            OCI_USER_ID: ${{ secrets.OCI_USER_ID }}
+            OCI_TENANCY_ID: ${{ secrets.OCI_TENANCY_ID }}
+            OCI_KEY_FINGERPRINT: ${{ secrets.OCI_KEY_FINGERPRINT }}
+            OCI_REGION: ${{ secrets.OCI_REGION }}
+            OCI_PRIVATE_KEY: ${{ secrets.OCI_PRIVATE_KEY }}
+          run: php run.php
