@@ -1,6 +1,6 @@
 name: Launch OCI ARM Instance
 
-  on:
+  "on":
     schedule:
       - cron: '*/5 * * * *'  # runs every 5 minutes
     workflow_dispatch:        # allows manual trigger
