@@ -28,4 +28,4 @@ jobs:
           OCI_KEY_FINGERPRINT: ${{ secrets.OCI_KEY_FINGERPRINT }}
           OCI_REGION: ${{ secrets.OCI_REGION }}
           OCI_PRIVATE_KEY: ${{ secrets.OCI_PRIVATE_KEY }}
-        run: php index.php
+        run: php Setup.php
