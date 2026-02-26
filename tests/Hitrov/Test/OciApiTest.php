@@ -146,5 +146,7 @@ class OciApiTest extends TestCase
         putenv('OCI_AVAILABILITY_DOMAIN=jYtI:PHX-AD-1');
         putenv('OCI_IMAGE_ID=ocid1.image.oc1.phx.aaaaaaaaasn6ek63v5gdpifr5emn6mtojzebcpewo4mvionam2btsoasy6sq');
         putenv('OCI_SUBNET_ID=ocid1.subnet.oc1.phx.aaaaaaaaidceersp3gaeew4u5xkogozc6pufcuanqg3age4putpwsiqj77kq');
+        putenv('OCI_TENANCY_ID=ocid1.tenancy.oc1..tenancy-id-here');
+        putenv('OCI_REGION=us-phoenix-1');
     }
 }
