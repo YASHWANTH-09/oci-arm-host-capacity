@@ -39,7 +39,7 @@ jobs:
           OCI_AVAILABILITY_DOMAIN: ${{ secrets.OCI_AVAILABILITY_DOMAIN }}
           OCI_IMAGE_ID: ${{ secrets.OCI_IMAGE_ID }}
           OCI_SUBNET_ID: ${{ secrets.OCI_SUBNET_ID }}
-          OCI_SSH_AUTHORIZED_KEYS: ${{ secrets.OCI_SSH_AUTHORIZED_KEYS }}
+          OCI_SSH_PUBLIC_KEY: ${{ secrets.OCI_SSH_AUTHORIZED_KEYS }}
           TELEGRAM_BOT_API_TOKEN: ${{ secrets.TELEGRAM_BOT_API_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: php index.php
